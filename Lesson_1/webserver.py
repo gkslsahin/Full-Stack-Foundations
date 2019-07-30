@@ -23,6 +23,8 @@ class webserverHandler(BaseHTTPRequestHandler):
                 self.wfile.write(output)
                 print output
                 return
+            else:
+                self.send_error(404,'File Not Found:%s' %s self.path)    
         except IOError:
             self.send_error(404,"File Not Found %s" % self.path)        
 
