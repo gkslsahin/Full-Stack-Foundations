@@ -26,6 +26,20 @@ def restaurantMenu(restaurant_id):
         output += '</br>'
     return output
 
+@app.route('/restaurants/<int:restaurant_id>/new/')
+def newMenuItem(restaurant_id):
+    return "page to create a new menu item. Task 1 complate!"
+
+
+@app.route('/restaurants/<int:restaurant_id>/<int:menu_id>/edit/')
+def editMenuItem(restaurant_id, menu_id):
+    return "page to create a new menu item. Task 2 complate!"
+
+@app.route('/restaurants/<int:restaurant_id>/<int:menu_id>/delete/')
+def deleteMenuItem(restaurant_idmenu_id):
+    return "page to create a new menu item. Task 3 complate!"
+
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=5000)
